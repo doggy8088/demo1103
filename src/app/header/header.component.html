@@ -25,12 +25,12 @@
   <div class="title-wrapper">
     <div class="container">
 
-      <img src="/assets/images/logo.png" class="pull-left logo" [title]="title" (click)="changeTitle($event)">
+      <img src="/assets/images/logo.png" class="pull-left logo" [title]="datasvc.title" (click)="changeTitle($event)">
 
       <div class="pull-left">
         <h1>
           <a [href]="title_url">
-            {{ title }}
+            {{ datasvc.title }}
           </a>
         </h1>
         <h3 [ngClass]="applyHighlight()" (click)="num=num+1;">記載著 Will 在網路世界的學習心得與技術分享 {{num}}</h3>
