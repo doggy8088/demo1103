@@ -14,8 +14,7 @@ export class AppComponent {
     this.keyword='';
   }
 
-  doSearch($event: KeyboardEvent, elm: HTMLInputElement) {
-    console.log($event);
-    this.keyword = elm.value;
+  doSearch(str: string) {
+    this.keyword = str;
   }
 }
