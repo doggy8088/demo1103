@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +9,9 @@ export class HeaderComponent implements OnInit {
 
   @Input()
   title = 'Hello World';
+
+  @Output()
+  change = new EventEmitter<string>();
 
   title_url = 'http://blog.miniasp.com/';
 
@@ -23,6 +26,7 @@ export class HeaderComponent implements OnInit {
     console.log($event);
     if($event.ctrlKey) {
       this.title = 'The Will Will Web';
+      this.change.emit(this.title);
     }
   }
 

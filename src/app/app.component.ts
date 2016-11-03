@@ -16,6 +16,7 @@ export class AppComponent {
 
   doSearch(str: string) {
     this.keyword = str;
+    this.title = str;
   }
 
   data = [
