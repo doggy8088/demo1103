@@ -9,4 +9,8 @@ export class AppComponent {
   title = 'app works!';
 
   keyword = 'TEST';
+
+  clearKeyword() {
+    this.keyword='';
+  }
 }
