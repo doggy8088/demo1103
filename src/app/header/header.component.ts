@@ -16,4 +16,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  changeTitle($event) {
+    console.log($event);
+    this.title = 'The Will Will Web';
+  }
 }
