@@ -11,6 +11,8 @@ export class HeaderComponent implements OnInit {
 
   title_url = 'http://blog.miniasp.com/';
 
+  num = 0;
+
   constructor() { }
 
   ngOnInit() {
@@ -21,5 +23,9 @@ export class HeaderComponent implements OnInit {
     if($event.ctrlKey) {
       this.title = 'The Will Will Web';
     }
+  }
+
+  applyHighlight() {
+    return {'highlight': this.num%2==0};
   }
 }
