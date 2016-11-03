@@ -13,4 +13,10 @@ export class AppComponent {
   clearKeyword() {
     this.keyword='';
   }
+
+  doSearch($event: KeyboardEvent) {
+    console.log($event);
+    var elm = $event.target as HTMLInputElement;
+    this.keyword = elm.value;
+  }
 }
